@@ -1,7 +1,42 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": false
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-  }
+    "angular-collections": {
+      "projectType": "library",
+      "root": "projects/angular-collections",
+      "sourceRoot": "projects/angular-collections/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/angular-collections/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/angular-collections/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/angular-collections/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/angular-collections/src/test.ts",
+            "tsConfig": "projects/angular-collections/tsconfig.spec.json",
+            "karmaConfig": "projects/angular-collections/karma.conf.js"
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "angular-collections"
 }
