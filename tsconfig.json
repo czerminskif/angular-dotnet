@@ -6,6 +6,14 @@
       "angular-collections": [
         "dist/angular-collections/angular-collections",
         "dist/angular-collections"
+      ],
+      "angular-tools": [
+        "dist/angular-tools/angular-tools",
+        "dist/angular-tools"
+      ],
+      "dotnet-rest": [
+        "dist/dotnet-rest/dotnet-rest",
+        "dist/dotnet-rest"
       ]
     },
     "baseUrl": "./",

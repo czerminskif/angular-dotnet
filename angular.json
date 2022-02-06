@@ -36,6 +36,68 @@
           }
         }
       }
+    },
+    "angular-tools": {
+      "projectType": "library",
+      "root": "projects/angular-tools",
+      "sourceRoot": "projects/angular-tools/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/angular-tools/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/angular-tools/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/angular-tools/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/angular-tools/src/test.ts",
+            "tsConfig": "projects/angular-tools/tsconfig.spec.json",
+            "karmaConfig": "projects/angular-tools/karma.conf.js"
+          }
+        }
+      }
+    },
+    "dotnet-rest": {
+      "projectType": "library",
+      "root": "projects/dotnet-rest",
+      "sourceRoot": "projects/dotnet-rest/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/dotnet-rest/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/dotnet-rest/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/dotnet-rest/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/dotnet-rest/src/test.ts",
+            "tsConfig": "projects/dotnet-rest/tsconfig.spec.json",
+            "karmaConfig": "projects/dotnet-rest/karma.conf.js"
+          }
+        }
+      }
     }
   },
   "defaultProject": "angular-collections"
