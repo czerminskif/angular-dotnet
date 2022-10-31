@@ -2,7 +2,7 @@ import { AbstractControl } from "@angular/forms";
 
 export class FormControlTools {
 
-    public static AddError(control: AbstractControl, errorName: string) {
+    public static addError(control: AbstractControl, errorName: string) {
         
         let current = control.errors;
         
@@ -14,7 +14,7 @@ export class FormControlTools {
         control.setErrors(current);
     }
 
-    public static RemoveError(control: AbstractControl, errorName: string) {
+    public static removeError(control: AbstractControl, errorName: string) {
 
         let current = control.errors;
         
